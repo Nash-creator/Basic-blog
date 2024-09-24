@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    background: #8ca378;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    font-family: cursive;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+}
+
+.nav-list li {
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-list a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr; 
+    gap: 20px;
+    padding: 20px;
+}
+
+.post-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.post {
+    background: #f4f4f4;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.date {
+    font-style: italic;
+    color: #555;
+}
+
+.post-image {
+    width: 100%;
+    height: auto;
+    margin: 15px 0;
+}
+
+.sidebar {
+    background: #efefef;
+    padding: 20px;
+}
+
+.footer {
+    background: #8ca378;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Responsive Design */
+
+/* Large screens (≥ 1200px) */
+@media (min-width: 1200px) {
+    .container {
+        grid-template-columns: 3fr 1fr; /* Main content and sidebar */
+    }
+}
+
+/* Medium screens (768px to 1199px) */
+@media (max-width: 1199px) and (min-width: 768px) {
+    .container {
+        grid-template-columns: 2fr 1fr; /* Two columns: main content and sidebar */
+    }
+}
+
+/* Small screens (≤ 767px) */
+@media (max-width: 767px) {
+    .container {
+        grid-template-columns: 1fr; /* Stack content on small screens */
+    }
+
+    .nav-list li {
+        display: block; /* Stack nav items vertically */
+        margin: 10px 0;
+    }
+}
